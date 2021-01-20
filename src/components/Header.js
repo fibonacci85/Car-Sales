@@ -1,17 +1,9 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 const Header = props => {
 
-  // const state ={
-  //   car: {
-  //     price: 26395,
-  //     name: '2019 Ford Mustang',
-  //     image:'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-  //     features: []
-  //   }
-  // }
-
+ 
   return (
     <>
       <figure className="image is-128x128">
@@ -23,17 +15,17 @@ const Header = props => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     car: {
-//       price: 26395,
-//       name: '2019 Ford Mustang',
-//       image:'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-//       features: []
-//     }
-//   }
-// }
+const mapStateToProps = () => {
+  return {
+    car: {
+      price: 26395,
+      name: '2019 Ford Mustang',
+      image:'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
+      features: []
+    }
+  }
+}
 
-// export default connect(mapStateToProps, {})(Header)
+export default connect(mapStateToProps, {})(Header)
 
-export default Header;
+// export default Header;
