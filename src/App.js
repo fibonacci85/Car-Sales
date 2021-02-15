@@ -8,13 +8,13 @@ import Total from './components/Total';
 const App = () => {
   const state = {
     additionalPrice: 0,
-    car: {
-      price: 26395,
-      name: '2019 Ford Mustang',
-      image:
-        'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-      features: []
-    },
+    // car: {
+    //   price: 26395,
+    //   name: '2019 Ford Mustang',
+    //   image:
+    //     'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
+    //   features: []
+    // },
     additionalFeatures: [
       { id: 1, name: 'V-6 engine', price: 1500 },
       { id: 2, name: 'Racing detail package', price: 1500 },
@@ -26,12 +26,12 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header />
+        <AddedFeatures />
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <Total additionalPrice={state.additionalPrice} />
       </div>
     </div>
   );
